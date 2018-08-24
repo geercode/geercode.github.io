@@ -1,0 +1,10 @@
+```
+DO
+AO
+DAO
+BO
+VO
+DTO
+PO
+JAVA BEAN
+```
