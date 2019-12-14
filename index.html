@@ -8,15 +8,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
 </head>
 <body>
 <div id="app">加载中</div>
+<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+
 <script>
     window.$docsify = {
         name: '',
         repo: '',
+        auto2top: true,
         loadSidebar: true,
+        maxLevel: 4,
         subMaxLevel: 3,
         alias: {
             '/': '/docs/main/index.md',
@@ -24,13 +29,22 @@
             '/.*/.*/_navbar.md': '/_navbar.md'
         },
         loadNavbar: true,
+        mergeNavbar: true,
         coverpage: true,
         onlyCover: true,
-
-        auto2top: true,
+        search: {
+            placeholder: '搜索',
+            noData: '找不到结果',
+            depth: 6
+        },
+        copyCode: {
+            buttonText : '点击复制',
+            errorText  : '复制出错',
+            successText: '复制成功'
+        },
         plugins: [
             EditOnGithubPlugin.create(
-                'https://github.com/geercode/geercode.github.io/',
+                'https://github.com/geercode/geercode.github.io/blob/master/',
                 null,
                 function (file) {
                     if (file.indexOf('en') === -1) {
@@ -40,9 +54,23 @@
                     }
                 }
             )
-        ]
+        ],
     }
 </script>
-<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+<script src="https://unpkg.com/docsify-copy-code@2"></script>
+<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '3792364bfe46c3091765',
+        clientSecret: '0bb1205ebde61b028037719e44dbdb8525d5a3b5',
+        repo: 'https://github.com/geercode/geercode.github.io.git',
+        owner: 'geercode',
+        admin: ['geercode'],
+        distractionFreeMode: false
+    })
+</script>
 </body>
 </html>
