@@ -8,8 +8,7 @@
 
 
 ```java
-
-sasdfa = new Object();
+Object sasdfa = new Object();
 ```
 
 ```bash
