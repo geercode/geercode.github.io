@@ -5,3 +5,14 @@
 #### 33
 
 ##### 44
+
+
+```java
+
+sasdfa = new Object();
+```
+
+```bash
+echo $PATH
+ps -ef | grep xxx
+```
