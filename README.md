@@ -1,3 +1,1 @@
-# Headline
-
-> An awesome project.
+[blog.geercode.com](https://blog.geercode.com)

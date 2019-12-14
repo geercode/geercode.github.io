@@ -9,16 +9,23 @@
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">加载中</div>
   <script>
     window.$docsify = {
       name: '',
       repo: '',
       loadSidebar: true,
-      subMaxLevel: 2,
+      subMaxLevel: 3,
       alias: {
-          '/.*/_sidebar.md': '/_sidebar.md'
+          '/': '/docs/main/index.md',
+          '/.*/.*/_sidebar.md': '/_sidebar.md',
+          '/.*/.*/_navbar.md': '/_navbar.md'
       },
+      loadNavbar: true,
+      coverpage: true,
+
+
+      auto2top: true,
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
