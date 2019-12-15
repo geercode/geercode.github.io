@@ -1,4 +1,4 @@
-<b><em>last updated at {docsify-updated}</em></b>
+<p align="right"><b><em>last updated at {docsify-updated}</em></b></p>
 
 # Maven的声明周期(Lifecycle )和阶段(Phase)
 ## 生命周期(Lifecycle )

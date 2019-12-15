@@ -1,4 +1,4 @@
-<b><em>last updated at {docsify-updated}</em></b>
+<p align="right"><b><em>last updated at {docsify-updated}</em></b></p>
 
 ```java
 Object sasdfa = new Object();
