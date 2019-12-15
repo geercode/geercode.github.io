@@ -1,5 +1,5 @@
 * [导航页](index.md)
 * [博客](docs/blog/index.md)
 * [项目](docs/project/index.md)
-* [社区](docs/community/index.md)
-* [关于我](docs/about/index.md)
+* [社区](docs/community/community.md)
+* [关于我](docs/about/about.md)

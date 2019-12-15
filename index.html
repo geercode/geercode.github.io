@@ -29,16 +29,18 @@
     </script>
 </head>
 <body>
-<div id="app">加载中</div>
+<div id="app"></div>
 <div style="margin-top: 10px;text-align: center;width:100%;height: 5px" onclick="window.open('hi.html')"></div>
 <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
 <script>
     window.$docsify = {
-        name: '',
+        name: 'geercode的博客',
+        nameLink: '/',
         repo: '',
         auto2top: true,
         loadSidebar: true,
         loadSidebar: 'index.md',
+        autoHeader: true,
         maxLevel: 4,
         subMaxLevel: 3,
         alias: {
@@ -48,7 +50,6 @@
         loadNavbar: true,
         mergeNavbar: true,
         coverpage: true,
-        //onlyCover: true,
         search: {
             placeholder: '搜索',
             noData: '找不到结果',
@@ -72,17 +73,31 @@
                 }
             )
         ],
+        formatUpdated: '{MM}/{DD} {HH}:{mm}',
+        footer: {
+            copy: '<span>Copyright &copy; 2019-2050</span>',
+            auth: 'by geercode',
+            pre: 'powered by docsify<hr/>',
+            style: 'text-align: center;'
+        },
     }
 </script>
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+
 <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
 <script src="https://unpkg.com/docsify-copy-code@2"></script>
+
 <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-nginx.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>
+<script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
+
 <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+
 <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
