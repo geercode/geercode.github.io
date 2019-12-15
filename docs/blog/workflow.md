@@ -1,3 +1,5 @@
+<b><em>last updated at {docsify-updated}</em></b>
+
 # Maven的声明周期(Lifecycle )和阶段(Phase)
 ## 生命周期(Lifecycle )
 > Maven有三套相互独立的生命周期(Lifecycle )

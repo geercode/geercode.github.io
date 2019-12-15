@@ -41,8 +41,8 @@
         loadSidebar: true,
         loadSidebar: 'index.md',
         autoHeader: true,
-        maxLevel: 4,
-        subMaxLevel: 3,
+        maxLevel: 5,
+        subMaxLevel: 5,
         alias: {
             '/': '/index.md',
             '/.*/.*/_navbar.md': '/_navbar.md'
@@ -73,7 +73,11 @@
                 }
             )
         ],
-        formatUpdated: '{MM}/{DD} {HH}:{mm}',
+        formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
+        toc: {
+            tocMaxLevel: 5,
+            target: 'h2, h3, h4, h5, h6'
+        },
         footer: {
             copy: '<span>Copyright &copy; 2019-2050</span>',
             auth: 'by geercode',
@@ -95,6 +99,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>
 <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
 
+<script src="//unpkg.com/docsify-plugin-toc"></script>
 <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
 <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
 
