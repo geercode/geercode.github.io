@@ -3,5 +3,6 @@
     * [概念](docs/blog/concept.md)
     * [Maven的生命周期(Lifecycle )和阶段(Phase)](docs/blog/workflow.md)
 * [项目](docs/project/index.md)
+    * [elehall](docs/project/elehall.md)
 * [社区](docs/community/community.md)
 * [关于我](docs/about/about.md)
