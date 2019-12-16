@@ -2,7 +2,7 @@
 
 ## ***自我介绍***
 
-![](../blog/static/Finch.png)
+![](../../asset/image/Finch.png)
 
 ```
     jerry niu

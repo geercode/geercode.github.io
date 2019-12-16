@@ -1,4 +1,4 @@
-![logo](docs/blog/static/Finch.png)
+![logo](asset/image/Finch.png)
 
 # geercode的博客
 
