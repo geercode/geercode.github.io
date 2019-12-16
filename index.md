@@ -14,6 +14,14 @@
         * [uaa](docs/blog/classroom101/uaa.md)
         * [xxl](docs/blog/classroom101/xxl.md)
         * [文档](docs/blog/classroom101/docguide.md)
+    * 规范
+        * 代码规范
+        * 数据库规范
+    * 脚手架
+    * 安装文档
+        * consul
+        * skywalking
+        * 日志
 * [项目](docs/project/index.md)
     * [elehall](docs/project/elehall.md)
 * [社区](docs/community/community.md)
