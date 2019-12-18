@@ -15,6 +15,7 @@
         * [文档](docs/blog/classroom101/docguide.md)
         * [数据仓库](docs/blog/classroom101/datawarehouse.md)
     * 数据结构
+        * [复杂度分析](https://www.cnblogs.com/chenjinxinlove/p/10038919.html)
         * trie -> succinct trie -> Aho-Corasick automaton(AC自动机)
     * 规范
         * 代码规范
