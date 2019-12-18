@@ -14,6 +14,7 @@
         * [uaa](docs/blog/classroom101/uaa.md)
         * [xxl](docs/blog/classroom101/xxl.md)
         * [文档](docs/blog/classroom101/docguide.md)
+        * [数据仓库](docs/blog/classroom101/datawarehouse.md)
     * 规范
         * 代码规范
         * 数据库规范

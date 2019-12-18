@@ -196,3 +196,11 @@ ServletWebServerInitializedEvent jar方式初始化会发送此事件,war方式�
 3.添加springboot打包插件,goal要包含repackage
 需要注意的，这几个容器在yml配置文件中的属性名称并不相同
 ```
+
+* 链接
+
+[手把手教你定制标准 Spring Boot starter](https://cloud.tencent.com/developer/article/1543058)
+
+[SpringBoot自动配置原理](https://cloud.tencent.com/developer/article/1537219)
+
+[条件注解](https://mp.weixin.qq.com/s?__biz=MzI1NDY0MTkzNQ==&mid=2247486073&idx=1&sn=1d618fb12ebd3a537079e46dfaf9bb66&chksm=e9c35819deb4d10ff87c7f1e759cfa87e5fc905af072792ceb29268e06c3f1967a1d2605cd33&scene=21#wechat_redirect)
