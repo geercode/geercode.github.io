@@ -1,4 +1,3 @@
-* [导航页](index.md)
 * [博客](docs/blog/index.md)
     * 101教室
         * [Git](docs/blog/classroom101/git.md)
@@ -15,6 +14,8 @@
         * [xxl](docs/blog/classroom101/xxl.md)
         * [文档](docs/blog/classroom101/docguide.md)
         * [数据仓库](docs/blog/classroom101/datawarehouse.md)
+    * 数据结构
+        * trie -> succinct trie -> Aho-Corasick automaton(AC自动机)
     * 规范
         * 代码规范
         * 数据库规范
@@ -23,6 +24,7 @@
         * consul
         * skywalking
         * 日志
+    * 轻松一些
 * [项目](docs/project/index.md)
     * [elehall](docs/project/elehall.md)
 * [社区](docs/community/community.md)
