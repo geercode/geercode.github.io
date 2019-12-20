@@ -31,7 +31,7 @@ element hall取自老滚五中冬堡学院的元素大厅，知识与技艺集�
 ## 三、快速入门
 
 ```
-
+详情参见 https://github.com/geercode/demo
 ```
 
 ## 四、功能特性
