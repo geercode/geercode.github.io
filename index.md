@@ -28,5 +28,6 @@
     * 轻松一些
 * [项目](docs/project/index.md)
     * [elehall](docs/project/elehall.md)
+    * [creed](docs/project/creed.md)
 * [社区](docs/community/community.md)
 * [关于我](docs/about/about.md)
