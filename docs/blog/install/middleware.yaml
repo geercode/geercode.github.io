@@ -1,0 +1,191 @@
+version: "3"
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    dns:
+      - 119.29.29.29
+      - 114.114.114.114
+    networks:
+      default:
+        ipv4_address: 172.18.0.2
+    ports:
+      - "13306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=WeAreSuperman
+    volumes:
+      - /opt/mysql/conf:/etc/mysql/conf.d
+      - /opt/mysql/data:/var/lib/mysql
+  redis:
+    image: redis:5.0.5-alpine
+    container_name: redis
+    dns:
+      - 119.29.29.29
+      - 114.114.114.114
+    networks:
+      default:
+        ipv4_address: 172.18.0.3
+    volumes:
+      - /opt/redis/data:/data
+      - /opt/redis/config/redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - "16379:6379"
+    command: redis-server /usr/local/etc/redis/redis.conf
+  nginx:
+    image: nginx:1.16.1-alpine
+    container_name: nginx
+    dns:
+      - 119.29.29.29
+      - 114.114.114.114
+    networks:
+      default:
+        ipv4_address: 172.18.0.4
+    volumes:
+      - /opt/nginx/html:/usr/share/nginx/html
+      - /opt/nginx/config/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "11080:80"
+  openldap:
+    image: osixia/openldap-backup:1.2.5
+    container_name: openldap
+    dns:
+      - 119.29.29.29
+      - 114.114.114.114
+    networks:
+      default:
+        ipv4_address: 172.18.0.5
+    environment:
+      LDAP_LOG_LEVEL: "256"
+      LDAP_ORGANISATION: "QTrade"
+      LDAP_DOMAIN: "qtrade.com.cn"
+      LDAP_BASE_DN: ""
+      LDAP_ADMIN_PASSWORD: "ypncrN/FlEktqNmdEw4YOA=="
+      LDAP_CONFIG_PASSWORD: "ypncrN/FlEktqNmdEw4YOA=="
+      LDAP_READONLY_USER: "true"
+      LDAP_READONLY_USER_USERNAME: "readonly"
+      LDAP_READONLY_USER_PASSWORD: "oRmmVbHMWNo="
+      LDAP_RFC2307BIS_SCHEMA: "false"
+      LDAP_BACKEND: "mdb"
+      LDAP_TLS: "false"
+      #LDAP_TLS_CRT_FILENAME: "ldap.crt"
+      #LDAP_TLS_KEY_FILENAME: "ldap.key"
+      #LDAP_TLS_DH_PARAM_FILENAME: "dhparam.pem"
+      #LDAP_TLS_CA_CRT_FILENAME: "ca.crt"
+      #LDAP_TLS_ENFORCE: "false"
+      #LDAP_TLS_CIPHER_SUITE: "SECURE256:-VERS-SSL3.0"
+      #LDAP_TLS_PROTOCOL_MIN: "3.1"
+      #LDAP_TLS_VERIFY_CLIENT: "demand"
+      LDAP_REPLICATION: "false"
+      #LDAP_REPLICATION_CONFIG_SYNCPROV: "binddn="cn=admin,cn=config" bindmethod=simple credentials=$LDAP_CONFIG_PASSWORD searchbase="cn=config" type=refreshAndPersist retry="60 +" timeout=1 starttls=critical"
+      #LDAP_REPLICATION_DB_SYNCPROV: "binddn="cn=admin,$LDAP_BASE_DN" bindmethod=simple credentials=$LDAP_ADMIN_PASSWORD searchbase="$LDAP_BASE_DN" type=refreshAndPersist interval=00:00:00:10 retry="60 +" timeout=1 starttls=critical"
+      #LDAP_REPLICATION_HOSTS: "#PYTHON2BASH:['ldap://ldap.example.org','ldap://ldap2.example.org']"
+      KEEP_EXISTING_CONFIG: "false"
+      LDAP_REMOVE_CONFIG_AFTER_SETUP: "true"
+      LDAP_SSL_HELPER_PREFIX: "ldap"
+      LDAP_BACKUP_CONFIG_CRON_EXP: "* 1 * * *"
+      LDAP_BACKUP_DATA_CRON_EXP: "* 1 * * *"
+    tty: true
+    stdin_open: true
+    volumes:
+      - /opt/openldap/data:/var/lib/ldap
+      - /opt/openldap/config:/etc/ldap/slapd.d
+      - /opt/openldap/cert:/container/service/slapd/assets/certs/
+      - /opt/openldap/backup:/data/backup
+    ports:
+      - "389:389"
+  phpldapadmin:
+    image: osixia/phpldapadmin:0.8.0
+    container_name: phpldapadmin
+    dns:
+      - 119.29.29.29
+      - 114.114.114.114
+    networks:
+      default:
+        ipv4_address: 172.18.0.6
+    environment:
+      - PHPLDAPADMIN_HTTPS="false"
+      - PHPLDAPADMIN_LDAP_HOSTS=openldap
+    ports:
+      - "10080:80"
+    depends_on:
+      - openldap
+  gitlab-runner:
+    image: gitlab/gitlab-runner:v11.11.4
+    container_name: gitlab-runner
+    restart: always
+    dns:
+      - 119.29.29.29
+      - 114.114.114.114
+    networks:
+      default:
+        ipv4_address: 172.18.0.7
+    volumes:
+      - /opt/gitlab_runner:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock
+  yearning:
+    image: huifumanlove/yearning:v2.11
+    container_name: yearning
+    restart: always
+    dns:
+      - 119.29.29.29
+      - 114.114.114.114
+    networks:
+      default:
+        ipv4_address: 172.18.0.8
+    depends_on:
+      - mysql
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ADDR=mysql:3306
+      - MYSQL_PASSWORD=WeAreSuperman
+      - MYSQL_DB=yearning
+    ports:
+      - "8000:8000"
+  zabbix-server-mysql:
+    image: zabbix/zabbix-server-mysql:alpine-4.2.6
+    container_name: zabbix-server-mysql
+    restart: always
+    dns:
+      - 119.29.29.29
+      - 114.114.114.114
+    networks:
+      default:
+        ipv4_address: 172.18.0.9
+    environment:
+      - DB_SERVER_HOST=mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=WeAreSuperman
+    ports:
+      - "10051:10051"
+    depends_on:
+      - mysql
+    links:
+      - mysql
+  zabbix-web-nginx-mysql:
+    image: zabbix/zabbix-web-nginx-mysql:centos-4.2.6
+    container_name: zabbix-web-nginx-mysql
+    restart: always
+    dns:
+      - 119.29.29.29
+      - 114.114.114.114
+    networks:
+      default:
+        ipv4_address: 172.18.0.10
+    environment:
+      - DB_SERVER_HOST=mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=WeAreSuperman
+      - ZBX_SERVER_HOST=zabbix-server-mysql
+      - PHP_TZ=Asia/Shanghai
+    ports:
+      - "12080:80"
+    depends_on:
+      - mysql
+      - zabbix-server-mysql
+    links:
+      - mysql
+      - zabbix-server-mysql
+networks:
+  default:
+    external:
+      name: middleware-network

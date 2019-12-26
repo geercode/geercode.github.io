@@ -25,6 +25,7 @@
         * consul
         * skywalking
         * 日志
+        * docker-compose安装独立中间件
     * 轻松一些
 * [项目](docs/project/index.md)
     * [elehall](docs/project/elehall.md)
