@@ -224,14 +224,16 @@ server {
 
 ### 7.语法详解
 
+```markdown
 语法规则：location [=|~|~*|^~]/uri/{...}
 
 * = 开头表示精确匹配
-* ^~ 开头表示uri以某个常规字符串开头，不是正则匹配，理解为匹配url路径即可。nginx不对url做编码，因此请求为/static/20%/aa,可以被规则^~ /static/ /aap匹配到（注意是空格）。        <span style="color:blue">以xx开头</span>
+* ^~ 开头表示uri以某个常规字符串开头，不是正则匹配，理解为匹配url路径即可。nginx不对url做编码，因此请求为/static/20%/aa,可以被规则 ^~ /static/ /aap匹配到（注意是空格）。        <span style="color:blue">以xx开头</span>
 * ~ 开头表示区分大小写的正则匹配。        <span style="color:blue">以xx结尾</span>
 * ~* 开头表示不区分大小写的正则匹配。     <span style="color:blue">以xx结尾</span>
 * !~ 和 !~* 分别为区分大小写不匹配及不区分大小写不匹配的正则
 * / 通用匹配，任何请求都会匹配到
+```
 
 ### 8.示例
 
