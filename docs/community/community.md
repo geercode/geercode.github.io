@@ -35,10 +35,6 @@
     * [网易云课堂](https://study.163.com/)
     * [兄弟连](http://www.itxdl.cn/)
     * [尚学堂](https://www.bjsxt.com/)
-    * [鳥哥的 Linux 私房菜](https://linux.vbird.org/)
-    * [阮一峰博客](http://www.ruanyifeng.com/blog/)
-    * [阮一峰github](https://github.com/ruanyf)
-    * [廖雪峰](https://www.liaoxuefeng.com/)
     * [厦门大学数据库实验室-林子雨大数据](http://dblab.xmu.edu.cn/)
     * [Kubernetes中文社区 | 中文文档](http://docs.kubernetes.org.cn/)
     * [Kubernetes国人维护者倪鹏飞 | gitbook中文维护版](https://feisky.gitbooks.io/kubernetes/)
@@ -48,3 +44,9 @@
 * 运维SRE
 * 在线编程
     * [领扣](https://leetcode.com/)
+* 名人博客
+    * [鳥哥的 Linux 私房菜](https://linux.vbird.org/)
+    * [阮一峰博客](http://www.ruanyifeng.com/blog/)
+    * [阮一峰github](https://github.com/ruanyf)
+    * [廖雪峰](https://www.liaoxuefeng.com/)
+    * [王垠](https://www.yinwang.org/)
