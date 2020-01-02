@@ -28,6 +28,7 @@
         * docker-compose安装独立中间件
     * 故事
         * [linux开源的第一封邮件](docs/blog/story/linux_first_email.md)
+        * [Talk is cheap](docs/blog/story/talk_cheap.md)
     * 轻松一些
         * [2019年总结](docs/blog/easypal/summary_2019.md)
         * [一种中型互联网企业的典型技术架构](docs/blog/easypal/medium_enterprise_architecture.md)
