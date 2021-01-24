@@ -97,4 +97,3 @@
 
 * [MongoDB分片（Sharding）技术](http://ddrv.cn/a/564642)
 * [MongoDB 分片键的选择与案例](https://www.cnblogs.com/chenmh/p/8954584.html)
-* [核心演示代码路径](social-graph-service/src/main/java/com/ddmc/social/graph/service/common/support/graph)
