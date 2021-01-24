@@ -14,6 +14,7 @@
         * [xxl](docs/blog/classroom101/xxl.md)
         * [文档](docs/blog/classroom101/docguide.md)
         * [数据仓库](docs/blog/classroom101/datawarehouse.md)
+        * [reactive](docs/blog/classroom101/reactive.md)
     * 数据结构
         * [复杂度分析](https://www.cnblogs.com/chenjinxinlove/p/10038919.html)
         * trie -> succinct trie -> Aho-Corasick automaton(AC自动机)
@@ -32,6 +33,10 @@
     * 轻松一些
         * [2019年总结](docs/blog/easypal/summary_2019.md)
         * [一种中型互联网企业的典型技术架构](docs/blog/easypal/medium_enterprise_architecture.md)
+        * [一种内容域的架构设计](docs/blog/easypal/domain_content_design.md)
+        * [一种社图系统架构设计](docs/blog/easypal/social_graph_design.md)
+        * [漫话游戏架构](docs/blog/easypal/game_arch.md)
+        * [2020年总结](docs/blog/easypal/summary_2020.md)
 * [项目](docs/project/index.md)
     * [elehall](docs/project/elehall.md)
     * [creed](docs/project/creed.md)

@@ -13,9 +13,14 @@
     * [xxl](docs/blog/classroom101/xxl.md)
     * [文档](docs/blog/classroom101/docguide.md)
     * [数据仓库](docs/blog/classroom101/datawarehouse.md)
+    * [reactive](docs/blog/classroom101/reactive.md)
 * 故事
     * [linux开源的第一封邮件](docs/blog/story/linux_first_email.md)
     * [Talk is cheap](docs/blog/story/talk_cheap.md)
 * 轻松一些
     * [2019年总结](docs/blog/easypal/summary_2019.md)
     * [一种中型互联网企业的典型技术架构](docs/blog/easypal/medium_enterprise_architecture.md)
+    * [一种内容域的架构设计](docs/blog/easypal/domain_content_design.md)
+    * [一种社图系统架构设计](docs/blog/easypal/social_graph_design.md)
+    * [漫话游戏架构](docs/blog/easypal/game_arch.md)
+    * [2020年总结](docs/blog/easypal/summary_2020.md)
